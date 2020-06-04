@@ -1,1 +1,1 @@
-export const foo = (): (n: number) => string => (n) => String(n)
+export const foo = (): (n: number) => (m: number) => string => (n) => (m) => String(n+m)
