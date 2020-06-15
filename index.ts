@@ -1,26 +1,10 @@
-export function foo(): (n: number) => (m: number) => string {
-    return function(n) {
-            return function(m) { 
-                return String(n+m)
-            }
-    }
-}
-
-export const foo = 
-    (): (n: number) => (m: number) => string => 
-        (n) => 
-            (m) => 
-                String(n+m)
-
-export const bar: 
-() => (n: number) => string = 
-    () => 
-        (n) => 
-            String(n)
-
-type Buz = () => (n: number) => string 
-
-export const buz: Buz = 
-    () => 
-        (n) => 
-            String(n)
+/* eslint-disable @typescript-eslint/no-empty-interface */
+export const foo: {
+    interfaceOuter: {
+        interfaceInner: (input: number) => number;
+    };
+} = {
+    interfaceOuter: {
+        interfaceInner: (input) => (input),
+    },
+};
